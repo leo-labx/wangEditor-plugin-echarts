@@ -21,7 +21,7 @@ yarn add wangeditor-plugin-echarts
 
 ```js
 import { Boot, IEditorConfig, IToolbarConfig } from '@wangeditor/editor'
-import echartsModule from 'wangeditor-plugin-echarts
+import echartsModule from 'wangeditor-plugin-echarts'
 
 // Register. Must be done before creating the editor and can only be registered once.
 Boot.registerModule(echartsModule)
