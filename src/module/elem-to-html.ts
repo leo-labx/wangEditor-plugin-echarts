@@ -9,7 +9,8 @@ import { EChartsElement } from './custom-types'
 // 生成 html 的函数
 function echartsToHtml(elem: SlateElement, childrenHtml: string): string {
   const { value = '', height = '300', width = '500' } = elem as EChartsElement
-  return `<span data-w-e-type="echarts" data-w-e-is-void data-w-e-is-inline data-value="${value}" data-height="${height}" data-width="${width}"></span>`
+  const rpValue = value.replace(/"/g, '&quot;')
+  return `<span data-w-e-type="echarts" data-w-e-is-void data-w-e-is-inline data-value="${rpValue}" data-height="${height}" data-width="${width}"></span>`
 }
 
 // 配置
